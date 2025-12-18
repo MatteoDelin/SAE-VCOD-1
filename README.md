@@ -11,3 +11,5 @@ just watch: https://guides.justwatch.com/robots.txt
 anime motivation https://fr.animemotivation.com/
 
 nautiljon https://www.nautiljon.com/
+
+neko sama (bizarre le site) https://www.neko-sama.org/
