@@ -9,3 +9,5 @@ Ledojomanga https://www.ledojomanga.com/anime/classement
 just watch: https://guides.justwatch.com/robots.txt
 
 anime motivation https://fr.animemotivation.com/
+
+nautiljon https://www.nautiljon.com/
