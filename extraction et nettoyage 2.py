@@ -175,6 +175,16 @@ for anime in anime_dicts:
 #EXPORT EXCEL
 
 df = pd.DataFrame(anime_dicts)
+
+# Traites les colones au format de nombre Americain
+df["Members"] = df['Members'].str.replace(',', '')
+df['Members'] = df['Members'].astype(int)
+df["Favorites"] = df['Favorites'].str.replace(',', '')
+df['Favorites'] = df['Favorites'].astype(int)
+df["Completed"] = df['Completed'].str.replace(',', '')
+df['Completed'] = df['Completed'].astype(int)
+df['Episodes'] = pd.to_numeric(df['Episodes'].replace('Unknown', None), errors='coerce').astype('Int64')
+
 df.to_excel(CHEMIN_EXCEL, index=False)
 
 print("Export Excel terminé")
