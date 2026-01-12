@@ -201,6 +201,48 @@ fig.append(
     )
 )
 
+mot_titre=[]
+for e in df["Name"]:
+    for f in e.split("_"):
+        if f not in mot_titre:
+            mot_titre.append(f)
+mot_df = pd.DataFrame(columns=["Name","Score"])
+for e in mot_titre:
+    score = df.loc[df['Name'].str.contains(e, case=False, na=False), 'Score'].mean()
+    mot_df.loc[len(mot_df)] = [e, score]
+
+fig.append(
+    px.histogram(
+        mot_df,
+        x="Name",
+        y="Score",
+        title="Distribution de " + genre_df.columns[0],
+        category_orders={
+        "Name": genre_df["Score"]}
+    ).update_xaxes(categoryorder='mean descending')
+)
+
+mot_titre=[]
+for e in df["Name"]:
+    for f in e.split("_"):
+        if f not in mot_titre:
+            mot_titre.append(f)
+mot_df = pd.DataFrame(columns=["Name","Score"])
+for e in mot_titre:
+    score = df.loc[df['Name'].str.contains(e, case=False, na=False), 'Score'].count()
+    mot_df.loc[len(mot_df)] = [e, score]
+
+fig.append(
+    px.histogram(
+        mot_df,
+        x="Name",
+        y="Score",
+        title="Distribution de " + genre_df.columns[0],
+        category_orders={
+        "Name": genre_df["Score"]}
+    ).update_xaxes(categoryorder='mean descending')
+)
+
 # =========================
 # App Dash
 # =========================

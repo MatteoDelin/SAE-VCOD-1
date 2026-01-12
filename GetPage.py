@@ -48,11 +48,11 @@ def get_data_page_mal(url):
     data = scrape_by_class(url+"/stats", class_to_scrape)
     return data
 
-def get_url_mal(n):
+def get_url_mal(s,n):
     url = "https://myanimelist.net/topanime.php?limit="
     class_to_scrape = "hoverinfo_trigger fl-l ml12 mr8"
     ls_url = []
-    for i in range(340,n,50):
+    for i in range(s,n,50):
         print(i)
         ls_url += scrape_by_class(url+str(i), class_to_scrape, True)
     return ls_url
@@ -63,9 +63,10 @@ def export_txt(texte, nom):
     with open("donneMAL/" + nom_nettoye + ".txt", "w", encoding="utf-8") as f:
         f.write("\n".join(texte))
 
-lien_mal=get_url_mal(1500)
-print("Scrape lien fini")
-for i in range(len(lien_mal)):
-    data=get_data_page_mal(lien_mal[i])
-    export_txt(data,lien_mal[i].strip('/').split('/')[-1])
-    print(i,") scrape fini pour :"+lien_mal[i].strip('/').split('/')[-1])
+def GetPage():
+    lien_mal=get_url_mal(0,1500)
+    print("Scrape lien fini")
+    for i in range(len(lien_mal)):
+        data=get_data_page_mal(lien_mal[i])
+        export_txt(data,lien_mal[i].strip('/').split('/')[-1])
+        print(i,") scrape fini pour :"+lien_mal[i].strip('/').split('/')[-1])
