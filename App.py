@@ -13,7 +13,6 @@ import pandas as pd
 
 # Graphiques Plotly
 import plotly.express as px
-import seaborn as sns
 
 # =========================
 # Chargement des données
