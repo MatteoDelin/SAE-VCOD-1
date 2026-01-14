@@ -1,4 +1,4 @@
-# Bibliothèque pour effectuer des requêtes HTTP
+# Bibliothèque pour effectuer des requêtes HTTP 
 import requests
 # Module pour lire et interpréter le fichier robots.txt
 import urllib.robotparser as robotparser

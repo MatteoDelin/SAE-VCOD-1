@@ -1,7 +1,7 @@
 # Collecte et Traitement de données MyAnimeList
 
 Ce projet est un outil de **Web Scraping** conçu pour extraire, nettoyer et centraliser des informations détaillées sur les animés depuis le site [MyAnimeList](https://myanimelist.net/).
-
+ 
 Les données passent par un processus de transformation (conversion des durées en minutes, gestion des saisons, nettoyage des doublons) avant d'être exportées dans un fichier Excel exploitable pour de l'analyse de données.
 
 Une WebApp interactive est mise à disposition pour visualiser les données selon plusieurs axes (temporels, thématiques, etc.). Elle permet d'explorer les résultats de l'analyse de manière intuitive.

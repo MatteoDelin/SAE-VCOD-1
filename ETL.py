@@ -1,4 +1,4 @@
-# Gestion des fichiers et dossiers
+# Gestion des fichiers et dossiers 
 import os
 
 # Lecture de fichiers CSV (les .txt sont lus comme des CSV à une colonne)
